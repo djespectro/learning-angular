@@ -1,3 +1,20 @@
 <div class="container">
   <h1>Hello World!</h1>
+  <hr>
+  <!-- interpalotaion -->
+  <h3>Welcome {{username}}</h3>
+  <!-- interpalotaion -->
+
+  <!-- property binding -->
+  <button class="btn btn-primary" [disabled]="!isEnabledAddUser">Just a Button</button>
+  <!-- property binding -->
+
+  <!-- event binding -->
+  <button class="btn info" (click)="enableInputName()">Add User</button>
+  <!-- event binding -->
+
+  <!-- two way binding -->  
+  <input type="text" class="form-control" [ngClass]="{'d-none':!isEnabledInputName}" [value]="" [(ngModel)]="inputName">
+  <p>{{inputName}}</p>
+  <!-- two way binding -->
 </div>
